@@ -80,7 +80,6 @@
                 <scope>test</scope>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/org.powermock/powermock-module-testng -->
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-module-testng</artifactId>
@@ -91,6 +90,12 @@
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-api-mockito</artifactId>
                 <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -275,6 +280,22 @@
                 <groupId>org.apache.felix</groupId>
                 <artifactId>org.apache.felix.scr.ds-annotations</artifactId>
                 <version>${apache.felix.scr.ds.annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.governance</groupId>
+                <artifactId>org.wso2.carbon.identity.captcha</artifactId>
+                <version>${identity.governance.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.osgi</groupId>
+                <artifactId>org.eclipse.osgi</artifactId>
+                <version>${version.equinox.osgi}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.organization.management.core</groupId>
+                <artifactId>org.wso2.carbon.identity.organization.management.service</artifactId>
+                <version>${identity.organization.management.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -463,7 +484,7 @@
     </distributionManagement>
 
     <properties>
-        <carbon.identity.version>5.12.335</carbon.identity.version>
+        <carbon.identity.version>5.17.5.224-SNAPSHOT</carbon.identity.version>
         <carbon.identity.event.version>5.18.209</carbon.identity.event.version>
         <commons-logging.version>4.4.3</commons-logging.version>
         <carbon.kernel.version>4.6.1</carbon.kernel.version>
@@ -492,14 +513,19 @@
         <carbon.identity.account.lock.handler.version>1.1.12</carbon.identity.account.lock.handler.version>
         <carbon.identity.account.lock.handler.imp.pkg.version.range>[1.1.12, 2.0.0)
         </carbon.identity.account.lock.handler.imp.pkg.version.range>
+        <version.equinox.osgi>3.9.1.v20130814-1242</version.equinox.osgi>
         <!--Test Dependencies-->
         <junit.version>4.12</junit.version>
         <testng.version>6.9.10</testng.version>
         <jacoco.version>0.7.9</jacoco.version>
+        <mockito.version>1.10.19</mockito.version>
         <powermock.version>1.6.5</powermock.version>
         <slf4j.api.version>1.5.6</slf4j.api.version>
         <maven.surefire.plugin.version>2.18.1</maven.surefire.plugin.version>
+        <identity.governance.version>1.4.1.56-SNAPSHOT</identity.governance.version>
+        <identity.organization.management.version>1.0.42</identity.organization.management.version>
 
         <apache.felix.scr.ds.annotations.version>1.2.4</apache.felix.scr.ds.annotations.version>
+        <osgi.service.import.version.range>[1.2.0,2.0.0)</osgi.service.import.version.range>
     </properties>
 </project>
